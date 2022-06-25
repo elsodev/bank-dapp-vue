@@ -116,18 +116,6 @@ export default {
           return
         }
 
-        // check whether user is on the correct chain
-        let chainId = await ethereum.request({method: 'eth_chainId'})
-        console.log('Connected to chain:' + chainId)
-
-        const rinkebyChainId = '0x4'
-        const local = '0x7a69'
-
-        if (!(chainId === rinkebyChainId || chainId === local)) {
-          alert('You are not connected to the Rinkeby/Localhost (hardhat) Testnet!')
-          return
-        }
-
         // get accounts
         this.connecting = true
         const accounts = await ethereum.request({method: 'eth_requestAccounts'})
