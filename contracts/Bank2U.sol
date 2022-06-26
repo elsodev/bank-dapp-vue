@@ -17,6 +17,6 @@ contract Bank2U {
     }
 
     function balance() external view returns (uint) {
-        return balances[msg.sender]; // returns the balanace of this user
+        return balances[msg.sender]; // returns the balance of this user
     }
 }
